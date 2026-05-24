@@ -116,12 +116,3 @@ pandas, numpy
 matplotlib, seaborn
 opencv-python
 ```
-
-## Note for Reviewers
-
-All notebooks have been executed and saved with their **original output cells intact**. The figures embedded in the notebooks match exactly those reported in the manuscript. To verify specific results, open the corresponding notebook listed in the table above — no retraining is required.
-
-To reproduce the results from scratch, execute notebooks in order:
-1. `1_Training/` → trains the models
-2. `2_Evaluation/` → computes fold-wise metrics
-3. `3_Visualization_and_Analysis/` → generates all figures and tables
