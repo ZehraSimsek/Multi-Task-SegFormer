@@ -26,7 +26,7 @@ All notebooks are provided with their **original cell execution outputs preserve
 |---|---|---|
 | `SegFormer_Evaluation.ipynb` | Patient-level test evaluation of the proposed SegFormer model. Loads fold-wise prediction CSVs, computes Dice, Accuracy, Sensitivity, Specificity, F1 per fold, and generates the aggregated confusion matrix. | Table 2, Table 3 (SegFormer rows), Figure 6A |
 | `YOLOv8_Evaluation.ipynb` | Patient-level test evaluation of YOLOv8-Seg. Includes per-fold confusion matrix generation. | Table 2, Table 3 (YOLOv8-Seg rows), Figure 6C |
-| `MaskRCNN_Evaluation.ipynb` | Patient-level test evaluation of Mask R-CNN. Includes segmentation table and fold-wise Dice boxplots. | Table 2, Table 3 (Mask R-CNN rows), Figure 6B |
+| `MaskRCNN_Evaluation.ipynb` | Patient-level test evaluation of Mask R-CNN. Includes segmentation table, fold-wise Dice boxplots, and per-fold confusion matrices. | Table 2, Table 3 (Mask R-CNN rows), Figure 6B |
 
 ---
 
@@ -36,7 +36,7 @@ All notebooks are provided with their **original cell execution outputs preserve
 |---|---|---|
 | `Dice_Boxplots_Figure4.ipynb` | Fold-wise Dice score boxplots across SegFormer, Mask R-CNN, and YOLOv8-Seg. | **Figure 4** |
 | `Prediction_vs_GT_Overlay_Figure5.ipynb` | Qualitative segmentation overlays: GT (white contours) vs. Prediction (red contours) for all three models. | **Figure 5** |
-| `Confusion_Matrices_Figure6.ipynb` | Aggregated patient-level confusion matrices for SegFormer (A), Mask R-CNN (B), and YOLOv8-Seg (C). | **Figure 6A, 6B, 6C** |
+| `Confusion_Matrices_Figure6.ipynb` | Patient-level confusion matrices for SegFormer (A), Mask R-CNN (B), and YOLOv8-Seg (C). Includes both per-fold breakdown and aggregated combined matrices for all three models. | **Figure 6A, 6B, 6C** |
 | `Results_Tables_Table2_Table3.ipynb` | Computes and formats Table 2 (Dice, IoU) and Table 3 (Accuracy, Sensitivity, Specificity, F1). | **Table 2, Table 3** |
 | `ROC_Calibration_Analysis.ipynb` | ROC curve with 95% bootstrap CI, Precision-Recall curve, Calibration plot (Brier Score), threshold sensitivity analysis. | Supplementary / Results section |
 | `Epoch_Timing_Analysis.ipynb` | Per-epoch and per-fold training time analysis across all models. | Discussion (computational complexity) |
@@ -50,20 +50,24 @@ High-resolution figures directly corresponding to the manuscript:
 
 | File | Manuscript Figure |
 |---|---|
-| `roc_curve_with_ci.png` | ROC Curve with 95% CI |
+| `confusion_matrix.png` | Figure 6A — SegFormer aggregated confusion matrix |
+| `confusion_matrix_segformer_perfold.png` | Figure 6A — SegFormer per-fold confusion matrices (5 folds + combined) |
+| `confusion_matrix_maskrcnn.png` | Figure 6B — Mask R-CNN per-fold confusion matrices (5 folds + combined) |
+| `confusion_matrix_yolo.png` | Figure 6C — YOLOv8-Seg per-fold confusion matrices (5 folds + combined) |
+| `per_fold_boxplots.png` | Figure 4 — Fold-wise Dice score boxplots |
+| `per_fold_boxplots_fixed.png` | Figure 4 — Fold-wise Dice score boxplots (alternative layout) |
+| `Figure_Prediction_vs_GroundTruth_ROI_BlueRed_Pairs.png` | Figure 5 — SegFormer qualitative segmentation overlays |
+| `maskrcnn_overlay_grid.png` | Figure 5 — Mask R-CNN qualitative segmentation overlay grid |
+| `image_005_R_P_001_pred_arthrit_with_GT_ROI.png` | Figure 5 — SegFormer, arthritis patient (005_R_P) |
+| `image_008_L_C_001_pred_control_with_GT_ROI.png` | Figure 5 — SegFormer, control patient (008_L_C) |
+| `image_016_R_C_001_pred_control_with_GT_ROI.png` | Figure 5 — SegFormer, control patient (016_R_C) |
+| `image_017_L_P_001_pred_arthrit_with_GT_ROI.png` | Figure 5 — SegFormer, arthritis patient (017_L_P) |
+| `roc_curve_with_ci.png` | ROC Curve with 95% bootstrap CI |
 | `pr_curve.png` | Precision-Recall Curve |
-| `confusion_matrix.png` | Figure 6A — SegFormer Confusion Matrix |
-| `per_fold_boxplots.png` | Figure 4 — Dice Boxplots (multi-model) |
-| `per_fold_boxplots_fixed.png` | Figure 4 — Dice Boxplots (corrected) |
 | `bland_altman.png` | Bland-Altman Agreement Plot |
-| `learning_curves.png` | Learning dynamics |
+| `learning_curves.png` | Learning dynamics (validation metrics per epoch) |
 | `calibration_plot.png` | Calibration / Reliability diagram |
-| `epoch_timing_analysis.png` | Epoch timing comparison |
-| `Figure_Prediction_vs_GroundTruth_ROI_BlueRed_Pairs.png` | Figure 5 variant |
-| `image_005_R_P_001_pred_arthrit_with_GT_ROI.png` | Figure 5 — sample arthritis case |
-| `image_008_L_C_001_pred_control_with_GT_ROI.png` | Figure 5 — sample control case |
-| `image_016_R_C_001_pred_control_with_GT_ROI.png` | Figure 5 — sample control case 2 |
-| `image_017_L_P_001_pred_arthrit_with_GT_ROI.png` | Figure 5 — sample arthritis case 2 |
+| `epoch_timing_analysis.png` | Per-epoch training time comparison across models |
 
 #### `Outputs/Tables/`
 CSV and LaTeX tables for direct paper verification:
