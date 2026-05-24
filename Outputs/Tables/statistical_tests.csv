@@ -1,0 +1,2 @@
+Comparison,Paired t-test (t),p-value (t-test),Wilcoxon (W),p-value (Wilcoxon),Cohen's d
+Validation vs Test mDice,4.3216,0.0001,177.0000,0.0000,0.2793
