@@ -14,7 +14,7 @@ All notebooks are provided with their **original cell execution outputs preserve
 
 | Notebook | Description | Manuscript Reference |
 |---|---|---|
-| `SegFormer_MTL_Training.ipynb` | Multi-Task SegFormer (MIT-B2) training with Optuna HPO. Includes nested CV setup, AdamW + cosine scheduler, joint BCE+Dice+Focal seg loss. | Table 1 (SegFormer rows) |
+| `SegFormer_MTL_Training.ipynb` | Multi-Task SegFormer (MiT-B0) training with Optuna HPO. Includes nested CV setup, AdamW + cosine scheduler, joint BCE+Dice+Focal seg loss. | Table 1 (SegFormer rows) |
 | `YOLOv8_Training.ipynb` | YOLOv8-Seg single-stage training pipeline with Optuna HPO. | Table 1 (YOLOv8-Seg rows) |
 | `MaskRCNN_Training.ipynb` | Mask R-CNN (ResNet50-FPN) two-stage training pipeline with Optuna HPO. COCO-format annotation conversion included. | Table 1 (Mask R-CNN rows), Figure 3B |
 
@@ -91,7 +91,7 @@ CSV and LaTeX tables for direct paper verification:
 
 - **Dataset**: 65 individuals (26 inflammatory arthritis, 39 non-IA controls); 10 B-mode slices per patient (650 total images)
 - **Cross-validation**: 5-fold patient-level (no patient data leakage between splits)
-- **HPO**: Nested CV — Optuna with 30 trials per outer fold
+- **HPO**: Nested CV — Optuna with 20 trials per outer fold
 - **Hardware**: Single GPU training
 
 ## Key Results (from Table 2 & Table 3)
