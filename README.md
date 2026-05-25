@@ -103,7 +103,6 @@ CSV and LaTeX tables for direct paper verification:
 | YOLOv8-Seg | 79.20 ± 3.91 | 68.87 ± 4.13 | 84.62 ± 7.69 | 100.00 ± 0.00 | 74.10 ± 13.43 | 83.23 ± 8.35 |
 
 ## Requirements
-
 ```
 Python >= 3.8
 torch >= 1.12
